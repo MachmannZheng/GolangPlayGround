@@ -1,4 +1,4 @@
-package testdelete
+package testDelete
 
 import "fmt"
 
