@@ -52,14 +52,20 @@ func ReadCSV() {
 	shoppingList := createShoppingList(data)
 
 	// print the array
-	fmt.Printf("%+v\n", shoppingList)
+	// fmt.Printf("%+v\n", shoppingList)
 
 	for _, val := range shoppingList {
 		fmt.Println(val)
-		b1, _ := strconv.ParseFloat(val.Vegetable, 32)
+		b1, err := strconv.ParseFloat(val.Vegetable, 64)
+		if err != nil {
+			log.Println("convert vegetable error")
+		}
 		fmt.Println(b1)
-		b2, _ := strconv.ParseFloat(val.Fruit, 32)
-		fmt.Println(b2)
 
+		b2, err := strconv.ParseFloat(val.Fruit, 64)
+		if err != nil {
+			log.Println("convert fruit error")
+		}
+		fmt.Println(b2)
 	}
 }
