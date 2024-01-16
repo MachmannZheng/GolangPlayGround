@@ -2,6 +2,6 @@ package testDelete
 
 import "fmt"
 
-func readCSV1() {
+func ReadCSV1() {
 	fmt.Println("read CSV")
 }
